@@ -36,22 +36,22 @@ app.use(express.static("public"));
 
 app.get("/",function(req,res)
 {
-  res.render("home",{home_content:homeStartingContent,posts:posts});
+  res.render(__dirname+"/views/home",{home_content:homeStartingContent,posts:posts});
 });
 
 app.get("/contact",function(req,res)
 {
-  res.render("contact",{contact_content:contactContent});
+  res.render(__dirname+"/views/contact",{contact_content:contactContent});
 });
 
 app.get("/about",function(req,res)
 {
-  res.render("about",{about_content:aboutContent});
+  res.render(__dirname+"/views/about",{about_content:aboutContent});
 });
 
 app.get("/compose",function(req,res)
 {
-  res.render("compose",{});
+  res.render(__dirname+"/views/compose",{});
 });
 
 app.post("/compose",function(req,res)
@@ -68,10 +68,10 @@ app.get("/posts/:title",function(req,res)
 {
   var titles=req.params.title;
   var entrypost=finder(titles,posts)
-  res.render("post",{entrypost:entrypost});
+  res.render(__dirname+"/views/post",{entrypost:entrypost});
 })
 
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server started on port 3000");
 });
