@@ -2,4 +2,11 @@ To run
 npm install 
 for the node modules
 then
-node app.js
+for running 
+npm start
+
+the website is live hosted
+
+https://limitless-lowlands-45368.herokuapp.com/
+
+
