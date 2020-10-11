@@ -1,6 +1,7 @@
 .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
+    padding-right: 70px;
 }
 .navbar {
     padding-top: 20px;
